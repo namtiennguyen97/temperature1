@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (a) {
+        this.a =a;
+        // ham  lay gia tri
+        this.getA = function () {
+            return this.a;
+        }
+        //ham chuyen doi sang F
+        /*
+        F  =  ( °C × 1.8 ) +  32
+        °C  =  ( °F ─  32 )  ⁄  1.8
+         */
+        this.getF =function () {
+            return (this.a* 1.8)+ 32;
+        }
+        //ham chuyen doi sang C
+        this.getK = function () {
+            return this.a + 273.15;
+        }
+    }
+    let chuyenDoi = new Temperature(25);
+    alert("Độ F là : "+ chuyenDoi.getF()+", Độ K là: "+ chuyenDoi.getK());
+
+</script>
+</body>
+</html>
